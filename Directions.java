@@ -3,7 +3,6 @@ package com.mjknox.directions;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,17 +15,10 @@ import org.json.simple.parser.ParseException;
 public class Directions {
 
 	private List<Route> routes;
-	private String origin;
-	private String dest;
-	private String mode;
-	private long departureTime;
-	
+
 	/**
-	 * Queries google maps and parses the returned JSON into usable POJOs
-	 * @param origin
-	 * @param dest
-	 * @param mode
-	 * @param departureTime
+	 * Performs google directions query and parses the results into POJOs
+	 * @param url
 	 * @throws IOException
 	 * @throws ParseException
 	 * @throws QueryFailedException
