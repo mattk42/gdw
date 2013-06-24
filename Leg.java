@@ -36,7 +36,7 @@ public class Leg {
 		JSONArray jsonSteps = (JSONArray) jsonData.get("steps");
 		for ( Object step : jsonSteps){
 			Step stepObj = new Step((JSONObject)step);
-			if (stepObj.getTravelMode().equals(Mode.TRANSIT.name())){
+			if (stepObj.getTravelMode().equals(ModeConstants.TRANSIT)){
 				hasTransit=true;
 			}
 			this.steps.add(stepObj);
@@ -97,13 +97,13 @@ public class Leg {
 
 	/**
 	 * @return an array of steps denoting information about each separate step of the leg of the journey, filtered by travelMode
-	 * @see Mode
+	 * @see ModeConstants
 	 */
-	public List<Step> getAllStepsByTravelMode(Mode travelMode){
+	public List<Step> getAllStepsByTravelMode(String travelMode){
 		List<Step> results = new ArrayList<Step>();
 		
 		for ( Step step : steps){
-			if ( step.getTravelMode().equals(travelMode.name())){
+			if ( step.getTravelMode().equals(travelMode)){
 				results.add(step);
 			}
 		}
