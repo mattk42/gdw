@@ -20,7 +20,7 @@ Example Usage:
     		//There will only be one route because we did not set alternatives=true
     		Route route = directions.getRoutes().get(0);
     		  
-    		//Print out the leg lengths some information for each Leg and Step
+    		//Print out some of the route information
     		for (Leg leg : route.getLegs()){
     			System.out.println("Depart:" + leg.getStartAddress());
     			
