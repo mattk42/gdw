@@ -2,7 +2,6 @@ package com.mjknox.gdw;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,12 +22,12 @@ public class Directions {
 	 * @throws ParseException
 	 * @throws QueryFailedException
 	 */
-	public Directions(URL url) throws IOException, ParseException, QueryFailedException{
+	public Directions(GoogleDirectionsQueryURL url) throws IOException, ParseException, QueryFailedException{
 		JSONParser parser = new JSONParser();
 		System.out.println(url);
 
 		//Get JSON back from that URL:
-		HttpURLConnection con = (HttpURLConnection) url.openConnection();
+		HttpURLConnection con = (HttpURLConnection) url.getURL().openConnection();
 		String content = IOUtils.toString(con.getInputStream(), "UTF-8");			
 		JSONObject jsonResponse = (JSONObject)parser.parse(content);
 		con.disconnect();

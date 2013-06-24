@@ -14,9 +14,9 @@ public class GoogleDirectionsQueryURL {
 		
 	/**
 	 * Creates a google maps URL with the required parameters.
-	 * @param origin
-	 * @param destination
-	 * @param sensor
+	 * @param origin The start location for the trip
+	 * @param destination The end location for the trip
+	 * @param sensor Whether or not the device this is ran on contains a gps sensor
 	 */
 	public GoogleDirectionsQueryURL(String origin, String destination, Boolean sensor){
 		params = new HashMap<String, String>();
