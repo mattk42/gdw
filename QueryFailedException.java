@@ -1,4 +1,4 @@
-package com.mjknox.directions;
+package com.mjknox.gdw;
 
 public class QueryFailedException extends Exception {
 

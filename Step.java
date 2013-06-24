@@ -1,4 +1,4 @@
-package com.mjknox.directions;
+package com.mjknox.gdw;
 
 import java.util.ArrayList;
 import java.util.List;

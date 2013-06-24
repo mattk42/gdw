@@ -1,4 +1,4 @@
-package com.mjknox.directions;
+package com.mjknox.gdw;
 	
 import org.json.simple.JSONObject;
 public class TransitDetails {

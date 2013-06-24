@@ -1,4 +1,4 @@
-package com.mjknox.directions;
+package com.mjknox.gdw;
 
 import java.net.MalformedURLException;
 import java.net.URL;
