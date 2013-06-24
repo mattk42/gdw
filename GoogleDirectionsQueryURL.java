@@ -31,8 +31,16 @@ public class GoogleDirectionsQueryURL {
 	 * @param key The key for the parameter
 	 * @param value The value for the parameter
 	 */
-	public void AddParam(String key, String value){
+	public void addParam(String key, String value){
 		this.params.put(URLEncoder.encode(key), URLEncoder.encode(value));
+	}
+	
+	/**
+	 * Used for removing non-required parameters from the URL.
+	 * @param key The key for the parameter
+	 */
+	public void delParam(String key){
+		this.params.remove(key);
 	}
 
 	/**

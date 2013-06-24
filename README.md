@@ -13,7 +13,7 @@ Example Usage:
 		public static void main(String[] args) throws IOException, ParseException, QueryFailedException, org.json.simple.parser.ParseException {	  
 			//Create the query URL
 			GoogleDirectionsQueryURL directionURL = new GoogleDirectionsQueryURL("Boston,MA", "Concord,MA", false);
-			directionURL.AddParam("waypoints", "Charlestown,MA|Lexington,MA");
+			directionURL.addParam("waypoints", "Charlestown,MA|Lexington,MA");
 			
 			Directions directions = new Directions(directionURL);
 			      
