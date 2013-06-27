@@ -36,7 +36,7 @@ public class Leg {
 		JSONArray jsonSteps = (JSONArray) jsonData.get("steps");
 		for ( Object step : jsonSteps){
 			Step stepObj = new Step((JSONObject)step);
-			if (stepObj.getTravelMode().equals(ModeConstants.TRANSIT)){
+			if (stepObj.getTravelMode().equals(ModeConstants.TRANSIT.toUpperCase())){
 				hasTransit=true;
 			}
 			this.steps.add(stepObj);
@@ -103,7 +103,8 @@ public class Leg {
 		List<Step> results = new ArrayList<Step>();
 		
 		for ( Step step : steps){
-			if ( step.getTravelMode().equals(travelMode)){
+			//Returned travelModes are always in uppercase
+			if ( step.getTravelMode().equals(travelMode.toUpperCase())){
 				results.add(step);
 			}
 		}

@@ -24,7 +24,6 @@ public class Directions {
 	 */
 	public Directions(GoogleDirectionsQueryURL url) throws IOException, ParseException, QueryFailedException{
 		JSONParser parser = new JSONParser();
-		System.out.println(url);
 
 		//Get JSON back from that URL:
 		HttpURLConnection con = (HttpURLConnection) url.getURL().openConnection();
